@@ -1,0 +1,79 @@
+/* CSS Document */
+:root {
+	--text-color-light: white;
+	--text-color-dark: gray;
+	--main-color-light: slategray;
+	--main-color-dark: darkslategray;
+	--second-color-light: blue;
+	--second-color-dark: darkblue;
+	--default-text-size: 12px;
+	
+	/*more cool stuff*/
+	--default-font-style: 18px times new roman, serif 
+	--monospace-font: "ubuntu-mono", Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+
+html, body{
+	height: 100vmin;
+	width: 100vmax;
+	margin: 0px;
+}
+
+body{
+	color: var(--text-color-light);
+	font: var(--default-font-style);
+	background-color: #536b93;
+	background-image: url(../images/open_brace.png), url(../images/close_brace.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: left center, right center;
+	background-size: contain, contain;
+}
+
+header{
+	width: 100%;
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+	font-family: var(--monospace-font);
+	font-size: 24px;
+	text-shadow: 2px 2px 1px #000;
+}
+
+nav{
+	width: 70%;
+	height: 25px;
+	margin: auto;
+	background-color: white;
+	opacity: .75;
+	font-family: var(--monospace-font);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+nav ul{
+	padding: 0px;
+	list-style: none;
+}
+
+nav ul li{
+	width: 19%;
+	display: inline-block;
+	text-align: center;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #536b93;
+}
+
+main{
+	width: 75%;
+	height: calc(100% - 125px);
+	margin: auto;
+}
+
+footer{
+	height: 25px;
+	width: 100%;
+	text-align: center;
+}
