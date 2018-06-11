@@ -1,0 +1,38 @@
+#dvInstructions {
+	font-family: "Times New Roman", "sans-serif";
+	font-size: 12pt;
+	display: block;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 1000;
+	border: 1px Gray dotted;
+	padding: 5px;
+	background: rgba(245,245,220,0.9);
+}
+#dvInstructions span {
+	font-weight: bold;
+}
+
+#dvInstructionsMain {
+	display: none;
+	width: 400px;
+}
+
+#dvInstructionsToggle {
+	cursor: pointer;
+	margin: auto;
+	text-align: right;
+}
+
+body
+{
+	background-color: white;
+}
+
+div#dvMain
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
