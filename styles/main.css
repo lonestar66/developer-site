@@ -1,16 +1,36 @@
 /* CSS Document */
 :root {
-	--text-color-light: white;
-	--text-color-dark: gray;
-	--main-color-light: slategray;
-	--main-color-dark: darkslategray;
-	--second-color-light: blue;
-	--second-color-dark: darkblue;
-	--default-text-size: 12px;
+	--monospace-font: "ubuntu-mono", Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	
+	--main-color-light: hsl(217, 28%, 78%);
+	--main-color-dark: hsl(217, 28%, 45%); /*#536b93*/;
+	--second-color-light: white;
+	--second-color-dark: gray;
+	
+	--default-text-size: 18px;
+	--content-text-size: 18px;
+	--header-text-size: calc(var(--content-text-size)*1.33);
+	
+	
+	--nav-item-color: var(--main-color-dark);
+	--nav-hover-color: var(--second-color-light);
+	--nav-item-active: var(--nav-hover-color);
+	--nav-shadow: 1px 1px 2px black, 0 0 25px var(--main-color-light), 0 0 5px var(--main-color-dark); /*#3AF;*/
+	
+	--text-color-light: var(--second-color-light);
+	--text-color-dark: var(--second-color-dark);
+	
+	
+	
+	
 	
 	/*more cool stuff*/
 	--default-font-style: 18px times new roman, serif 
-	--monospace-font: "ubuntu-mono", Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	
+	--content-text-font: var(--content-text-size) var(--monospace-font);
+	
+	
+	--nav-item-width: 19%;
 }
 
 html, body{
@@ -22,7 +42,7 @@ html, body{
 body{
 	color: var(--text-color-light);
 	font: var(--default-font-style);
-	background-color: #536b93;
+	background-color: var(--main-color-dark);
 	background-image: url(../images/open_brace.png), url(../images/close_brace.png);
 	background-repeat: no-repeat, no-repeat;
 	background-position: left center, right center;
@@ -35,7 +55,7 @@ header{
 	padding-top: 10px;
 	text-align: center;
 	font-family: var(--monospace-font);
-	font-size: 24px;
+	font-size: var(--header-text-size);
 	text-shadow: 2px 2px 1px #000;
 }
 
@@ -44,7 +64,6 @@ nav{
 	height: 25px;
 	margin: auto;
 	background-color: white;
-	opacity: .75;
 	font-family: var(--monospace-font);
 	font-size: 18px;
 	font-weight: bold;
@@ -56,24 +75,91 @@ nav ul{
 }
 
 nav ul li{
-	width: 19%;
+	padding-top: 2px;
+	width: var(--nav-item-width);
 	display: inline-block;
 	text-align: center;
 }
 
 nav ul li a{
 	text-decoration: none;
-	color: #536b93;
+	color: var(--nav-item-color);
+	cursor: pointer;
+}
+
+nav ul li a:hover{
+	color: var(--nav-hover-color);
+	text-shadow: var(--nav-shadow);
+}
+
+nav ul li a.active{
+	color: var(--nav-item-active);
+	text-shadow: var(--nav-shadow);
 }
 
 main{
-	width: 75%;
+	width: 70%;
 	height: calc(100% - 125px);
-	margin: auto;
+	margin: 0px auto;
+	padding: 0px;
+}
+main div.dvContent{
+	height: 100%;
+	width: 100%;
+	font-family: var(--monospace-font);
+	font-size: var(--content-text-font);
+	overflow: auto;
+}
+
+div.textdiv{
+	position: relative;
+	text-align: center;
+	top: calc(50% - var(--content-text-size));
 }
 
 footer{
 	height: 25px;
 	width: 100%;
 	text-align: center;
+	font-size: 12px;
+}
+
+form.contactForm{
+	display: table;
+	width: 500px;
+	margin: auto;
+}
+
+form.contactForm div{
+	display: table-row;
+}
+
+form.contactForm span{
+	width: 250px;	
+	display: table-cell;
+	vertical-align: top;
+	padding: 5px;
+}
+
+form.contactForm span.label{
+	text-align: right;	
+}
+
+form.contactForm span.input{
+	text-align: left;
+}
+
+form.contactForm span.submit{
+	width: 500px;
+	text-align: center;
+	display: table-footer-group;
+}
+
+/*generic*/
+.hideme{
+	display: none;
+}
+
+.showme{
+	display: block;
 }
