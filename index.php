@@ -64,28 +64,34 @@
 				<p>Contact</p>
 				<form class="contactForm" id="contact" name="contact" method="post">
 					<div>
-						<span>
+						<span class="label">
 							<label for="namu">Name:</label>
 						</span>
-						<span>
+						<span class="input">
 							<input type="text" name="namu" />
-						</span><br />
-						<span>
+						</span>
+					</div>
+					<div>
+						<span class="label">
 							<label for="emailu">Email:</label>
 						</span>
-						<span>
+						<span class="input">
 							<input type="text" name="emailu" />
-						</span><br />
-						<span>
+						</span>
+					</div>
+					<div>
+						<span class="label">
 							<label for="message">Message:</label>
-						</span></br>
-						<span>
+						</span>
+						<span class="input">
 							<textarea name="messageu"></textarea>
 						</span>
-					<!--<span><button name="sendu" class="g-recaptcha"
+					</div>
+					<div>
+						<span class="submit"><button name="sendu">Send!</button><!--<button name="sendu" class="g-recaptcha"
 data-sitekey="6LcB510UAAAAAIxEgKjE9V2zZGsL6Q96AgRMwbx-"
-data-callback="YourOnSubmitFn">Send!</button></span>-->
-					</datalist>
+data-callback="YourOnSubmitFn">Send!</button>--></span>
+					</div>
 				</form>
 			</div>
 		</div>

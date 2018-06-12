@@ -125,20 +125,34 @@ footer{
 }
 
 form.contactForm{
-	
+	display: table;
+	width: 500px;
+	margin: auto;
+}
+
+form.contactForm div{
+	display: table-row;
 }
 
 form.contactForm span{
-	width: 250px;
-	display: inline-block;
+	width: 250px;	
+	display: table-cell;
+	vertical-align: top;
+	padding: 5px;
 }
 
-form.contactForm span label{
-	text-align: right;
+form.contactForm span.label{
+	text-align: right;	
 }
 
-form.contactForm span input{
+form.contactForm span.input{
 	text-align: left;
+}
+
+form.contactForm span.submit{
+	width: 500px;
+	text-align: center;
+	display: table-footer-group;
 }
 
 /*generic*/
